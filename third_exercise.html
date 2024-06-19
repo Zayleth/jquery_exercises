@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JQUERY Third Exercise</title>
+</head>
+
+<body>
+  <script src = "jquery.js"></script>
+  <table border = "1">
+  <tr>
+    <td>primero</td>
+    <td>segundo</td>
+    <td>tercero</td>
+    <td>cuarto</td>
+  </tr>
+
+  <tr>
+    <td>primero</td>
+    <td>segundo</td>
+    <td>tercero</td>
+    <td>cuarto</td>
+  </tr>
+
+  <tr>
+    <td>primero</td>
+    <td>segundo</td>
+    <td>tercero</td>
+    <td>cuarto</td>
+  </tr>
+
+  <tr>
+    <td>primero</td>
+    <td>segundo</td>
+    <td>tercero</td>
+    <td>cuarto</td>
+  </tr>
+  </table>
+
+  <input type="color" />
+
+  <script>
+    let x = $(document);
+    x.ready(inicializarEventos);
+
+    function inicializarEventos() {
+      let x = $("tr");
+      x.click(presionFila);
+    }
+
+    function presionFila() {
+      let x = $(this);
+      x.css("background-color", "#ff0000")
+    }
+
+
+  </script>
+</body>
+</html>

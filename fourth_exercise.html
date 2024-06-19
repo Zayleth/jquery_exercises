@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JQUERY Fourth Exercise</title>
+</head>
+
+<body>
+  <ul id = "lista1">
+    <li>Puesto 1</li>
+    <li>Puesto 2</li>
+    <li>Puesto 3</li>
+  </ul>
+
+  <input type = "button" value = "ocultar" id ="boton1">
+  <input type = "button" value = "mostrar" id = "boton2">
+
+  <script src="jquery.js"></script>
+  <script>
+    let x = $(document);
+    x.ready(inicializarEventos);
+
+    function inicializarEventos() {
+      let x = $("#boton1");
+      let y = $("#boton2");
+      x.click(ocultarItem);
+      y.click(mostrarItem);
+    }
+
+    function ocultarItem() {
+      let x = $("#lista1");
+      x.hide();
+    }
+
+    function mostrarItem() {
+        let x = $("#lista1");
+        x.show();
+    }
+
+  </script>
+  
+</body>
+</html>

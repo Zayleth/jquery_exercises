@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JQUERY First Exercise</title>
+</head>
+<body>
+  <input type = "button" id = "boton1" value = "presioname"></input>
+  <script src = "jquery.js"></script>
+  <script>
+    let x = $(document);
+    x.ready(inicializarEventos);
+
+    function inicializarEventos() {
+      let X = $("#boton1");
+      x.click(presionBoton)
+    }
+
+    function presionBoton() {
+      alert("Se presionó el botón");
+    }
+
+  </script>
+  
+</body>
+</html>

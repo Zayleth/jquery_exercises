@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JQUERY Second Exercise</title>
+</head>
+<body>
+  <script src = "jquery.js"></script>
+  <h1 id = "titulo1">Titulo 1</h1>
+  <h1 id = "titulo2">Titulo 2</h1>
+
+  <script>
+    let x = $(document);
+    x.ready(inicializarEventos); // atento que se llamara a ese funcion en documento (html)
+
+    function inicializarEventos() {
+      let x = $("#titulo1");
+      x.click(presionTitulo1); // al dar click se ejecuta la funcion
+      x = $("#titulo2");
+      x.click(presionTitulo2);
+    }
+
+    function presionTitulo1() {
+      let x = $("#titulo1");
+      x.css("color", "#ff0000");
+      x.css("background-color", "#ffff00");
+      x.css("font-family", "Courier");
+    }
+
+    function presionTitulo2() {
+      let x = $("#titulo2");
+      x.css("color", "#ffff00");
+      x.css("background-color", "#ff0000");
+      x.css("font-family", "Arial");
+    }
+  </script>
+</body>
+</html>
