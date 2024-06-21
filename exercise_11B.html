@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+
+
+  <p id="cx">Coordenada en x:</p>
+  <p id="cy">Coordenada en y:</p>
+
+  <script src = "jquery.js"></script>
+
+  <script>
+    let x = $(document)
+    x.ready(inicializarEventos)
+
+    function inicializarEventos() {
+      let x = $(document)
+      x.mousemove(mover) // cuando el mouse se mueva
+    }
+
+    function mover(event) {
+      let x = $("#cx")
+      x.text("Coordenada en X = " + event.clientX)
+      x = $("#cy")
+      x.text("Coordenada en Y = " + event.clientY)
+
+      if (event.clientY <= 200) {
+        $("body").css("background-image", "url('https://i.pinimg.com/236x/b4/66/44/b466448408074c240ab6b2bc6e3099b3.jpg')")
+      
+      } else if (event.clientY <= 400) {
+          $("body").css("background-image", "url('https://i.pinimg.com/236x/4d/f7/0b/4df70bba400b6fff25a00ab3a1ff4804.jpg')")
+        
+        } else {
+          $("body").css("background-image", "url('https://i.pinimg.com/236x/fd/b0/dc/fdb0dcd8f84aacd6b6ed89f02024e1f2.jpg')")
+        }
+    }
+  </script>
+  
+</body>
+</html>

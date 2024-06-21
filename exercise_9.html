@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JQUERY Exercise 9</title>
+</head>
+<body>
+
+  <h1>Pase de Mouse y Salida de Mouse</h1>
+  <script src = "jquery.js"></script>
+
+  <script>
+    let x = $(document);
+    x.ready(inicializarEventos)
+
+    function inicializarEventos() {
+      let x = $("h1")
+      x.mouseover(entrar)
+      x = $("h1")
+      x.mouseout(salir)
+    }
+
+    function entrar() {
+      $(this).css("color", "#ff00ff") // this -> equivale a toma el elemento h1 y aplicale el css
+    }
+
+    function salir() {
+      $(this).css("color", "#000")
+    }
+  </script>
+  
+</body>
+</html>

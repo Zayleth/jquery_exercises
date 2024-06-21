@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Exercise 11</title>
+</head>
+<body>
+  <p id="cx">Coordenada en x:</p>
+  <p id="cy">Coordenada en y:</p>
+
+  <script src = "jquery.js"></script>
+
+  <script>
+    let x = $(document)
+    x.ready(inicializarEventos)
+
+    function inicializarEventos() {
+      let x = $(document)
+      x.mousemove(mover) // cuando el mouse se mueva
+    }
+
+    function mover(event) {
+      let x = $("#cx")
+      x.text("Coordenada en X = " + event.clientX)
+      x = $("#cy")
+      x.text("Coordenada en Y = " + event.clientY)
+
+      if (event.clientY > 300) {
+        $("body").css("color", "#ffff") // this -> equivale a toma el elemento h1 y aplicale el css
+        $("body").css("background", "purple")
+      }
+    }
+  </script>
+
+</body>
+</html>
