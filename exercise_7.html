@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JQUERY Exercise 7</title>
+</head>
+<body>
+
+  <input type = "button" id = "boton1" value="Agregar Valor">
+  <input type = "button" id = "boton2" value="Mostrar Valor">
+  <input type = "button" id = "boton3" value="Eliminar Valor">
+
+  <table id = "tabla1">
+    <tr><td>1111</td><td>1111</td><td>1111</td><td>1111</td></tr>
+    <tr><td>1111</td><td>1111</td><td>1111</td><td>1111</td></tr>
+    <tr><td>1111</td><td>1111</td><td>1111</td><td>1111</td></tr>
+    <tr><td>1111</td><td>1111</td><td>1111</td><td>1111</td></tr>
+  </table>
+
+  <script src = "jquery.js"></script>
+  
+  <script>
+  let x = $(document);
+  x.click(inicializarEventos);
+
+  function inicializarEventos() {
+    let x = $("#boton1");
+    x.click(agregarPropiedadBorde);
+    x = $("#boton2");
+    x.click(mostrarValor);
+    x = $("#boton3");
+    x.click(eliminarValor);
+  }
+
+  function agregarPropiedadBorde() {
+    let x = $("#tabla1");
+    x.attr("border", "1")
+  }
+
+  
+  function mostrarValor() {
+    let x = $("#tabla1");
+    if (x.attr("border") != undefined)
+      alert(x.attr("border")); // agregar atributo
+    else
+    alert ("No esta definida la propiedad <border> en la tabla")
+  }
+
+  function eliminarValor() {
+    let x = $("#tabla1")
+    x.removeAttr("border");
+  }
+  
+  </script>
+  
+</body>
+</html>

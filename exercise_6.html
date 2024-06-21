@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JQUERY Exercise 6</title>
+</head>
+
+<body>
+  <p id = "parrafo1">First Thing</p>
+  <p id = "parrafo2">Second Thing</p>
+
+  <button id = "boton1">Leer Texto</button>
+  <button id = "boton2">Modificar Texto</button>
+
+  <script src = "jquery.js"></script>
+  
+  <script>
+  let x = $(document);
+  x.click(inicializarEventos);
+
+  function inicializarEventos() {
+    let x = $("#boton1");
+    x.click(extraerTexto);
+    x = $("#boton2");
+    x.click(modificarTexto);
+  }
+
+  function extraerTexto() {
+    let x = $("#parrafo1");
+    alert(x.text());
+  }
+
+  function modificarTexto() {
+    let x = $("#parrafo2");
+    x.text("Nuevo texto del parrafo");
+  }
+  </script>
+</body>
+</html>

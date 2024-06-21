@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JQUERY Exercise 8</title>
+</head>
+<body>
+  <input type = "button" id ="boton1" value = "Mostrar Formulario">
+  <input type = "button" id ="boton2" value = "Mostrar Elementos">
+  <div id = "formulario"></div>
+
+  <script src = "jquery.js"></script>
+  
+  <script>
+  let x = $(document);
+  x.click(inicializarEventos);
+
+  function inicializarEventos() {
+    let x = $("#boton1");
+    x.click(presionBoton1);
+    x = $("#boton2");
+    x.click(presionBoton2);
+  }
+
+  function presionBoton1() {
+    let x = $("#formulario");
+    x.html('<form>Ingrese nombre: <input type="text" id="nombre">' + '<br>Ingrese clave: <input type="password" id = "clave"<br>' + '<input type = "submit" value = "Confirmar"></form>')
+  }
+
+  function presionBoton2() {
+    let x = $("#formulario");
+    alert(x.html());
+  }
+  </script>
+  
+</body>
+</html>
