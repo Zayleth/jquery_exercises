@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQUERY counter plus mousedown function</title>
+</head>
+<body>
+
+    <span>0</span>
+    <hr>
+    <button>Click here!</button>
+
+    <script src="../jquery.js"></script>
+    
+    <script>
+        let counter = 0;
+        let x = $(document)
+        x.ready(callFunction)
+
+        function callFunction() {
+            let x = $("button")
+            x.mousedown(mousedown_function)
+        }
+
+        function mousedown_function() {
+            let x = $("span")
+            counter++;
+            $("span").text(counter)
+        }
+
+    </script>
+</body>
+</html>

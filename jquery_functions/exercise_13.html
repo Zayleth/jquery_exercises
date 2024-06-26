@@ -19,7 +19,7 @@
         x.ready(inicializarEventos) // The x.ready() function (provided by jQuery) ensures that the inicializarEventos function is executed only after the entire document (including the DOM) has finished loading.
 
         function inicializarEventos() {
-            let x = $(document)
+            let x = $("div")
             x.dblclick(to_change_color)
         }
 
