@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQUERY - empty FUNCTION</title>
+</head>
+<body>
+
+    <h2>5 interesting topics for you to explore</h2>
+    <ul>
+        <li>Economics and how the world works</li>
+        <li>Human history</li>
+        <li>The mind and brain</li>
+        <li>The future of technology</li>
+        <li>Arts and culture</li>
+    </ul>
+    <script src = "jquery.js"></script>
+
+    <script>
+        /*
+        empty FUNCTION
+        This function is used to empty an HTML element that contains internal elements, for example the <ul>
+        - make a list that contains several items and when you click on the element it empties them
+        */
+
+        let x = $(document)
+        x.ready(callFunction)
+
+        function callFunction() {
+            let x = $("ul")
+            x.click(empty_function)
+        }
+
+        function empty_function() {
+            let x = $("ul")
+            x.empty("ul")
+        }
+    </script>
+</body>
+</html>

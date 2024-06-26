@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQUERY toggle - FUNCTION</title>
+</head>
+<body>
+    <p>
+        Neuroscience is a captivating field that explores the intricate workings of the nervous system, the very foundation of our thoughts, emotions, and actions. 
+        It delves into the structure and function of the brain, unraveling the mysteries of how these billions of interconnected neurons process information, generate 
+        memories, and control our behavior. From deciphering the language of the brain to understanding how diseases affect its function, neuroscience holds immense 
+        potential for improving human health, developing new treatments for neurological disorders, and even unlocking the secrets of consciousness itself.
+    </p>
+    <button>Toggle function</button>
+    <script src="jquery.js"></script>
+    
+    <script>
+        /*
+        Toggle FUNCTION
+        This function allows you to go from visible to hidden state and vice versa in a fading way 
+        - make a paragraph and create a button that when you click the button calls the function to make the paragraph appear and disappear
+        */
+
+        let x = $(document)
+        x.ready(callFunction)
+
+        function callFunction() {
+            let x = $("button")
+            x.click(toggle_function)
+        }
+
+        function toggle_function() {
+            let x = $("p")
+            x.toggle("p")
+
+            x = $("button")
+            x.css("background", "#64c9c0")
+        }
+    </script>
+</body>
+</html>

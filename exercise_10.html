@@ -3,19 +3,20 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>JQUERY hover - FUNCTION</title>
 </head>
 <body>
 
-  <h1>Prueba de Hover</h1>
+  <h1>Hover</h1>
   <script src = "jquery.js"></script>
+  
   <script>
     let x = $(document);
     x.ready(inicializarEventos)
 
     function inicializarEventos() {
       let x = $("h1")
-      x.hover(entrar, salir) // aceta dos funciones como parametros y se ahorra el uso de varias funciones de mouse.
+      x.hover(entrar, salir) // acepta dos funciones como parametros y se ahorra el uso de varias funciones de mouse.
     }
 
     function entrar() {
@@ -25,8 +26,6 @@
     function salir() {
       $(this).css("color", "#000")
     }
-
-
 
   </script>
 </body>

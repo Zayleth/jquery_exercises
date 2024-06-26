@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQUERY - focus FUNCTION</title>
+</head>
+<body>
+    
+    <input type = "text" 
+    id = "input"
+    style = "border: 2px solid black";
+    placeholder = "Enter your name" />
+
+    <script src = "jquery.js"></script>
+    
+    <script>
+        // focus function - focus() method in JavaScript is used to give focus to an HTML element, such as an input field, button, or link. 
+        // When called on an element, it brings that element into focus, typically highlighting it or making it ready for user interaction. 
+        
+        let x = $(document)
+        x.mousemove(callFunction)
+
+        function callFunction() {
+            let x = $("#input")
+            x.mousemove(change_input_border)
+        }
+
+        function change_input_border() {
+            let x = $("#input");
+            x.css("border", "2px solid #6fbdca")
+        }
+    </script>
+</body>
+</html>

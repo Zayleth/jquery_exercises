@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQUERY blur - FUNCTION</title>
+</head>
+<body>
+
+    <input type = "text" 
+    id = "input"
+    style = "border: 2px solid black";
+    placeholder = "Enter your age" />
+
+    <script src = "jquery.js"></script>
+
+    <script>
+        /*
+        blur - FUNCTION
+        This function is used to detect the cursor leaving a positioned text box 
+        - create a function that sends an alert when exiting the input
+        */
+
+        
+        // let age = parseInt(input)
+        let x = $(document)
+        x.ready(callFunction)
+        
+        function callFunction() {
+            let x = $("#input")
+            x.blur(send_an_alert)
+        }
+
+        function send_an_alert() {
+            let x = $("#input");
+            alert("Welcome!")
+        }
+    </script>
+</body>
+</html>
