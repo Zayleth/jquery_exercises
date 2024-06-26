@@ -24,17 +24,17 @@
         - make a list that contains several items and when you click on the element it empties them
         */
 
-        let x = $(document)
+        let x = $("li")
         x.ready(callFunction)
 
         function callFunction() {
-            let x = $("ul")
+            let x = $("li")
             x.click(empty_function)
         }
 
         function empty_function() {
-            let x = $("ul")
-            x.empty("ul")
+            let x = $(this)
+            x.empty()
         }
     </script>
 </body>

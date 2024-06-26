@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JQUERY each - FUNCTION</title>
+</head>
+<body>
+    <section id = "sec">
+        <p>8910</p>
+        <p>12345</p>
+        <p>45</p>
+        <p>EACH FUNCTION</p>
+        <p>JQUERY</p>
+        <p>EACH</p>
+        <p>FUNCTION</p>
+    </section>
+
+    <script src = "../jquery.js"></script>
+
+    <script>
+        let x = $(document)
+        x.ready(callFunction)
+
+        function callFunction() {
+            let x = $("#sec p")
+            x.each(out)
+        }
+
+        function out() {
+            let x = $(this)
+            if (x.text().length < 5) {
+                x.css("color", "#00f")
+            }
+        }
+    </script>
+</body>
+</html>
